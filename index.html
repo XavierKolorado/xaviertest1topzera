@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel - História, Regras e Informações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🏓 Padel Brasil</div>
+        <ul class="nav-links">
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#history">História</a></li>
+            <li><a href="#structure">Estrutura</a></li>
+            <li><a href="#rules">Regras</a></li>
+            <li><a href="#characteristics">Características</a></li>
+            <li><a href="#benefits">Benefícios</a></li>
+            <li><a href="#world">No Mundo</a></li>
+            <li><a href="#curiosities">Curiosidades</a></li>
+            <li><a href="#quiz" class="quiz-btn">Quiz</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Introdução Section -->
+    <section id="intro" class="hero">
+        <div class="hero-content">
+<h1>🏓 Padel</h1>
+            <h2>História, Regras e Informações</h2>
+            <p><strong>Pádel, Padel ou Paddle</strong> é um jogo disputado entre duas duplas com raquetes específicas para padel e uma bola que pode ser de tênis ou propriamente de padel.</p>
+            <p>O padel é um esporte de raquete jogado em duplas que combina elementos do tênis e do squash. Ele se destaca por ser dinâmico, fácil de aprender e muito social, o que explica seu rápido crescimento em diversos países.</p>
+            <p class="highlight">A principal característica do padel é o uso das paredes ao redor da quadra, que fazem parte ativa do jogo.</p>
+            <button class="cta-btn" onclick="scrollToSection('history')">Descobrir Mais</button>
+        </div>
+        <div class="hero-visual">
+            <div class="court-animation">
+                <div class="court">
+                    <div class="net"></div>
+                    <div class="ball"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- História Section -->
+    <section id="history" class="section">
+        <h2>🧠 História do Padel</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">1969</div>
+                <div class="timeline-content">
+                    <h3>🎯 Criação no México</h3>
+                    <p>O padel foi criado em 1969, no México, por <strong>Enrique Corcuera</strong>. Ele construiu uma quadra em sua casa com paredes ao redor e adaptou regras próprias, criando um novo esporte.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Anos 70</div>
+                <div class="timeline-content">
+                    <h3>🇪🇸 Chegada à Espanha</h3>
+                    <p>Pouco tempo depois, o esporte foi levado para a Espanha por <strong>Alfonso de Hohenlohe-Langenburg</strong>. A partir daí, o padel se popularizou rapidamente.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Hoje</div>
+                <div class="timeline-content">
+                    <h3>🌍 Expansão Global</h3>
+                    <p>Atualmente o padel é um dos esportes que mais cresce no mundo, com forte expansão no Brasil e em vários países da Europa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrutura Section -->
+    <section id="structure" class="section alt-bg">
+        <h2>🎾 Estrutura do Jogo</h2>
+        <div class="structure-grid">
+            <div class="structure-card">
+                <div class="structure-icon">📍</div>
+                <h3>Quadra</h3>
+                <ul>
+                    <li>Mede aproximadamente <strong>20m x 10m</strong></li>
+                    <li>Cercada por paredes de vidro e grades metálicas</li>
+                    <li>Possui uma rede no meio, semelhante ao tênis</li>
+                </ul>
+            </div>
+            <div class="structure-card">
+                <div class="structure-icon">🏓</div>
+                <h3>Equipamentos</h3>
+                <ul>
+                    <li><strong>Raquete:</strong> sólida, sem cordas, com furos</li>
+                    <li><strong>Bola:</strong> semelhante à de tênis, porém com menor pressão</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regras Section -->
+    <section id="rules" class="section">
+        <h2>📏 Regras do Padel</h2>
+        <div class="rules-container">
+            <div class="rule-item" onclick="toggleRule(this)">
+                <div class="rule-header">
+                    <span>🔢</span>
+                    <h3>Sistema de Pontuação</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="rule-content">
+                    <p>Igual ao tênis:</p>
+                    <p class="highlight-text">15 → 30 → 40 → game</p>
+                    <p>Em caso de empate (40x40), ocorre o <strong>"deuce"</strong></p>
+                </div>
+            </div>
+            <div class="rule-item" onclick="toggleRule(this)">
+                <div class="rule-header">
+                    <span>🎯</span>
+                    <h3>Saque</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="rule-content">
+                    <ul>
+                        <li>Deve ser feito por <strong>baixo</strong></li>
+                        <li>A bola precisa <strong>quicar</strong> antes do contato com a raquete</li>
+                        <li>Deve ser direcionado na <strong>diagonal</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule-item" onclick="toggleRule(this)">
+                <div class="rule-header">
+                    <span>🔄</span>
+                    <h3>Durante o Jogo</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="rule-content">
+                    <ul>
+                        <li>A bola deve <strong>quicar no chão</strong> antes de atingir a parede</li>
+                        <li>Após o quique, pode bater nas paredes e continuar em jogo</li>
+                        <li>Os jogadores podem usar as paredes para devolver a bola</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rule-item" onclick="toggleRule(this)">
+                <div class="rule-header">
+                    <span>❌</span>
+                    <h3>Pontos Inválidos</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="rule-content">
+                    <ul>
+                        <li>Bola bate <strong>direto na parede</strong> antes do chão</li>
+                        <li>Bola <strong>quica duas vezes</strong> no chão</li>
+                        <li>Bola <strong>sai da quadra</strong> sem retorno válido</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Section -->
+    <section id="characteristics" class="section alt-bg">
+        <h2>⚡ Características do Esporte</h2>
+        <div class="characteristics-grid">
+            <div class="characteristics-card">
+                <div class="char-icon">🎾</div>
+                <h3>Mais Acessível</h3>
+                <p>Mais acessível que o tênis</p>
+            </div>
+            <div class="characteristics-card">
+                <div class="char-icon">🔥</div>
+                <h3>Mais Emoção</h3>
+                <p>Trocas de bola mais longas (mais emoção no jogo)</p>
+            </div>
+            <div class="characteristics-card">
+                <div class="char-icon">🧠</div>
+                <h3>Estratégia</h3>
+                <p>Forte foco em estratégia e posicionamento</p>
+            </div>
+            <div class="characteristics-card">
+                <div class="char-icon">👍</div>
+                <h3>Fácil Início</h3>
+                <p>Menor exigência técnica inicial</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="benefits" class="section">
+        <h2>💪 Benefícios do Padel</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">❤️</div>
+                <h3>Condicionamento Físico</h3>
+                <p>Melhora o condicionamento físico geral</p>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="95"></div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Coordenação</h3>
+                <p>Desenvolve coordenação motora e reflexos</p>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="90"></div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🧠</div>
+                <h3>Raciocínio</h3>
+                <p>Trabalha o raciocínio rápido</p>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="85"></div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">👥</div>
+                <h3>Trabalho em Equipe</h3>
+                <p>Estimula o trabalho em equipe</p>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="95"></div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🧘</div>
+                <h3>Bem-Estar Mental</h3>
+                <p>Reduz o estresse</p>
+                <div class="progress-bar">
+                    <div class="progress" data-percent="90"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Padel no Mundo Section -->
+    <section id="world" class="section alt-bg">
+        <h2>🌍 Padel no Mundo</h2>
+        <div class="world-section">
+            <div class="world-popular">
+                <h3>📈 Extremamente Popular</h3>
+                <div class="country-tags">
+                    <span class="tag tag-primary">Espanha</span>
+                    <span class="tag tag-primary">Argentina</span>
+                </div>
+            </div>
+            <div class="world-growing">
+                <h3>🚀 Crescendo Rapidamente</h3>
+                <div class="country-tags">
+                    <span class="tag tag-warning">Brasil</span>
+                    <span class="tag tag-warning">Portugal</span>
+                    <span class="tag tag-warning">Itália</span>
+                </div>
+            </div>
+        </div>
+        <div class="wpt-info">
+            <h3>🏆 Circuito Profissional</h3>
+            <p>O principal circuito profissional é o <strong>World Padel Tour</strong>, que reúne os melhores atletas do mundo.</p>
+        </div>
+    </section>
+
+    <!-- Curiosidades Section -->
+    <section id="curiosities" class="section">
+        <h2>🏆 Curiosidades</h2>
+        <div class="curiosities-grid">
+            <div class="curiosity-card">
+                <span class="curiosity-number">1</span>
+                <p>O padel já possui <strong>milhões de praticantes</strong> no mundo</p>
+            </div>
+            <div class="curiosity-card">
+                <span class="curiosity-number">2</span>
+                <p>É considerado <strong>um dos esportes</strong> que mais cresce atualmente</p>
+            </div>
+            <div class="curiosity-card">
+                <span class="curiosity-number">3</span>
+                <p>É muito praticado por <strong>atletas de outros esportes</strong>, como futebol</p>
+            </div>
+            <div class="curiosity-card">
+                <span class="curiosity-number">4</span>
+                <p>As partidas costumam ser <strong>mais longas e dinâmicas</strong> que no tênis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusão Section -->
+    <section id="conclusion" class="section alt-bg">
+        <h2>📝 Conclusão</h2>
+        <div class="conclusion-content">
+            <p>O padel é um esporte <strong>moderno, acessível e em constante crescimento</strong>. Sua facilidade de aprendizado e o caráter social tornam sua prática cada vez mais popular em todo o mundo.</p>
+            <p>Além disso, proporciona <strong>diversos benefícios físicos e mentais</strong>, sendo uma excelente opção tanto para lazer quanto para competição.</p>
+            <div class="conclusion-cta">
+                <button class="cta-btn cta-large" onclick="scrollToSection('quiz')">Teste Seus Conhecimentos!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section">
+        <h2>📝 Quiz: Teste Seus Conhecimentos</h2>
+        <div class="quiz-container">
+            <div class="quiz-progress">
+                <span>Questão <span id="currentQ">1</span> de <span id="totalQ">5</span></span>
+                <div class="progress-dots" id="progressDots"></div>
+            </div>
+            <div class="question-container" id="questionContainer">
+                <h3 id="questionText"></h3>
+                <div class="options" id="options"></div>
+            </div>
+            <div class="result" id="result" style="display: none;">
+                <h3>Sua Pontuação: <span id="score"></span>/5</h3>
+                <p id="feedback"></p>
+                <button onclick="restartQuiz()">Refazer Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>🏓 Projeto de Educação Física - Padel</p>
+        <p>Um esporte moderno, acessível e em constante crescimento!</p>
+        <div class="credits">
+            <h3>Feito por:</h3>
+            <p class="credits-main">Gabriel Xavier</p>
+            <p class="credits-team">Com ajuda de: Ygor Luiz, Isabela Corrêa, Emyllie, Anna Paula e Lavynia</p>
+            <p class="credits-class">Turma 1° 103</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
