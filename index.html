@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padel - História, Regras e Informações</title>
-    <link rel="stylesheet" href="styles.css">
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -329,6 +331,894 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+
+    <style>
+    /* CSS CONTENT START */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #2ECC71;
+    --secondary: #27AE60;
+    --dark: #2C3E50;
+    --light: #ECF0F1;
+    --accent: #E74C3C;
+    --warning: #F39C12;
+    --text: #34495E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.quiz-btn {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.quiz-btn:hover {
+    background: var(--secondary);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--dark);
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 2rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: slideInLeft 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.4);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.court-animation {
+    width: 300px;
+    height: 200px;
+    perspective: 500px;
+}
+
+.court {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #27AE60 0%, #1E8449 100%);
+    border: 5px solid white;
+    border-radius: 10px;
+    position: relative;
+    transform: rotateX(30deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.net {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background: white;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background: #F1C40F;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        top: 30%;
+    }
+    50% {
+        top: 60%;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alt-bg {
+    background: #f8f9fa;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--dark);
+}
+
+/* Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-year {
+    background: var(--primary);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+/* Rules */
+.rules-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rule-item {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rule-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rule-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--dark);
+    color: white;
+}
+
+.rule-header span {
+    font-size: 1.5rem;
+}
+
+.rule-header h3 {
+    flex: 1;
+}
+
+.expand-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.rule-item.active .expand-icon {
+    transform: rotate(45deg);
+}
+
+.rule-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: white;
+}
+
+.rule-item.active .rule-content {
+    max-height: 200px;
+    padding: 1.5rem;
+}
+
+/* Benefits */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background: #eee;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Interactive Demo */
+.interactive-demo {
+    text-align: center;
+}
+
+.score-display {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.demo-court {
+    width: 400px;
+    height: 250px;
+    background: linear-gradient(180deg, #27AE60 0%, #1E8449 100%);
+    margin: 0 auto 2rem;
+    border-radius: 10px;
+    position: relative;
+    border: 4px solid white;
+    overflow: hidden;
+}
+
+.demo-net {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 4px;
+    background: white;
+}
+
+.demo-player {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.5s ease;
+    border: 3px solid white;
+}
+
+.player-left {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3498DB;
+}
+
+.player-right {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent);
+}
+
+.demo-ball {
+    width: 20px;
+    height: 20px;
+    background: #F1C40F;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.demo-controls {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.demo-controls button {
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.demo-controls button:hover {
+    background: var(--primary);
+    transform: scale(1.05);
+}
+
+.demo-controls button:active {
+    transform: scale(0.95);
+}
+
+.demo-text {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 500;
+    min-height: 1.5rem;
+}
+
+/* Quiz */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.progress-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: 0.3s;
+}
+
+.progress-dot.correct {
+    background: var(--primary);
+}
+
+.progress-dot.wrong {
+    background: var(--accent);
+}
+
+.question-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    border-color: var(--primary);
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.option.selected {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
+.option.correct {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
+.option.wrong {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: white;
+}
+
+.result {
+    text-align: center;
+    padding: 2rem;
+}
+
+.result h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        padding: 2rem;
+        gap: 1rem;
+        transition: 0.3s;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .court-animation {
+        display: none;
+    }
+    
+    .demo-court {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+    /* CSS CONTENT END */
+    </style>
+
+    <script>
+// Mobile Menu Toggle
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Smooth scroll to section
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
+// Toggle Rules (Accordion)
+function toggleRule(element) {
+    // Close all other rules
+    document.querySelectorAll('.rule-item').forEach(item => {
+        if (item !== element) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle current rule
+    element.classList.toggle('active');
+}
+
+// Animate Progress Bars on Scroll
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.progress');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const percent = bar.getAttribute('data-percent');
+                setTimeout(() => {
+                    bar.style.width = percent + '%';
+                }, 200);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    progressBars.forEach(bar => observer.observe(bar));
+}
+
+// Quiz Data
+const quizQuestions = [
+    {
+        question: "Em que ano foi criado o Padel?",
+        options: ["1964", "1974", "1984", "1994"],
+        correct: 1
+    },
+    {
+        question: "Quantos jogadores jogam em uma partida de Padel?",
+        options: ["1v1", "2v2", "3v3", "4v4"],
+        correct: 1
+    },
+    {
+        question: "Em que país o Padel foi criado?",
+        options: ["Espanha", "México", "Brasil", "Argentina"],
+        correct: 1
+    },
+    {
+        question: "Quantos games tem uma partida completa de Padel?",
+        options: ["3 games", "5 games", "6 games", "9 games"],
+        correct: 2
+    },
+    {
+        question: "Qual é a altura aproximada da rede de Padel?",
+        options: ["50 cm", "88 cm", "1 metro", "1,5 metros"],
+        correct: 1
+    }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+function initQuiz() {
+    const progressDots = document.getElementById('progressDots');
+    
+    // Create progress dots
+    for (let i = 0; i < quizQuestions.length; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'progress-dot';
+        progressDots.appendChild(dot);
+    }
+    
+    loadQuestion();
+}
+
+function loadQuestion() {
+    const questionText = document.getElementById('questionText');
+    const options = document.getElementById('options');
+    const currentQSpan = document.getElementById('currentQ');
+    const answeredStatus = document.querySelectorAll('.progress-dot');
+    
+    answered = false;
+    currentQSpan.textContent = currentQuestion + 1;
+    
+    // Update progress dots
+    answeredStatus.forEach((dot, index) => {
+        if (index < currentQuestion) {
+            // Keep previous answers visible
+        } else {
+            dot.className = 'progress-dot';
+        }
+    });
+    
+    // Load question
+    const q = quizQuestions[currentQuestion];
+    questionText.textContent = q.question;
+    options.innerHTML = '';
+    
+    q.options.forEach((opt, index) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'option';
+        optionDiv.textContent = opt;
+        optionDiv.onclick = () => selectAnswer(index);
+        options.appendChild(optionDiv);
+    });
+}
+
+function selectAnswer(index) {
+    if (answered) return;
+    
+    answered = true;
+    const q = quizQuestions[currentQuestion];
+    const options = document.querySelectorAll('.option');
+    const dots = document.querySelectorAll('.progress-dot');
+    
+    // Show correct/wrong
+    if (index === q.correct) {
+        options[index].classList.add('correct');
+        dots[currentQuestion].classList.add('correct');
+        score++;
+    } else {
+        options[index].classList.add('wrong');
+        options[q.correct].classList.add('correct');
+        dots[currentQuestion].classList.add('wrong');
+    }
+    
+    // Disable all options
+    options.forEach(opt => {
+        opt.style.pointerEvents = 'none';
+    });
+    
+    // Next question after delay
+    setTimeout(() => {
+        currentQuestion++;
+        
+        if (currentQuestion < quizQuestions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500);
+}
+
+function showResult() {
+    const questionContainer = document.getElementById('questionContainer');
+    const result = document.getElementById('result');
+    const scoreSpan = document.getElementById('score');
+    const feedback = document.getElementById('feedback');
+    
+    questionContainer.style.display = 'none';
+    result.style.display = 'block';
+    
+    scoreSpan.textContent = score;
+    
+    if (score === 5) {
+        feedback.textContent = '🏆 Perfeito! Você é um expert em Padel!';
+    } else if (score === 4) {
+        feedback.textContent = '🎉 Ótimo! Você conhece muito bem o Padel!';
+    } else if (score === 3) {
+        feedback.textContent = '👍 Bom trabalho! Mas pode melhorar!';
+    } else if (score === 2) {
+        feedback.textContent = '📚 Precisa estudar mais sobre Padel!';
+    } else {
+        feedback.textContent = '📖 Revise o conteúdo e tente novamente!';
+    }
+}
+
+function restartQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    answered = false;
+    
+    const questionContainer = document.getElementById('questionContainer');
+    const result = document.getElementById('result');
+    
+    questionContainer.style.display = 'block';
+    result.style.display = 'none';
+    
+    // Reset dots
+    document.querySelectorAll('.progress-dot').forEach(dot => {
+        dot.className = 'progress-dot';
+    });
+    
+    loadQuestion();
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', function() {
+    animateProgressBars();
+    initQuiz();
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.boxShadow = 'none';
+        }
+    });
+    
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            
+            // Close mobile menu
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
+});
+
+// Easter egg - Konami code
+let konamiCode = [];
+const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+document.addEventListener('keydown', function(e) {
+    konamiCode.push(e.key);
+    
+    if (konamiCode.length > 10) {
+        konamiCode.shift();
+    }
+    
+    if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+        // Easter egg - show celebration
+        document.body.style.animation = 'rainbow 1s infinite';
+        console.log('🎉 Você descobriu o Easter Egg! Parabéns!');
+        alert('🎉 Easter Egg descoberto!\n\nVocê é um verdadeiro expert em Padel! 🏆');
+    }
+});
+</script>
+
+
+
 </body>
 </html>
